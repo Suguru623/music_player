@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08音樂播放器</title>
+    <link rel="stylesheet" href="music_player.css">
+</head>
+
+<body>
+    <audio id="audio"></audio>
+
+    <div id="music_player">
+        <h1 id="title"></h1>
+        <input type="range" id="progressBar" value="0" oninput="setProgress()">
+        <select id="selectPlayList" onchange="changeMusic(0)">
+        </select>
+        <br>
+        <div id="volController">
+            <input type="range" value="100" oninput="setVolumeByRange()">
+            <input type="button" value="-" onclick="setVolumeByButton(-10)">
+            <input type="button" value="+" onclick="setVolumeByButton(+10)">
+            <input type="text" value="100" readonly>
+        </div>
+        <br>
+        <span onclick="changeMusic(-1)">9</span>
+        <span onclick="playMusic()" id="playpausebtn">4</span>
+        <span onclick="changeMusic(1)">:</span>
+        <span onclick="stopMusic()" id="stop">&lt;</span>
+        <span onclick="mute()" id="mutebtn">U</span>
+        <span onclick="setFuncBtnStatus()" id="loopbtn" title="單曲循環">q</span>
+        <span onclick="setFuncBtnStatus()" id="fullLoopbtn" title="全部循環">`</span>
+        <span onclick="setFuncBtnStatus()" id="randomplay" title="隨機播放">s</span>
+        <span onclick="prevTime()">7</span>
+        <span onclick="nextTime()">8</span>
+        <span onclick="quickMusic()">快速</span>
+        <span onclick="slowMusic()">慢速</span>
+        <span onclick="normalMusic()">正常速度</span>
+        <span onclick="showBook()">@</span>
+        <br>
+        <br>
+        <div id="songList">
+            <div id="info">
+                <div>請點選撥放鍵</div>
+                <div>00:00 / 00:00</div>
+                <div>正常</div>
+            </div>
+            <hr>
+            <h3>歌曲清單</h3>
+        </div>
+        <div id="book" class="hide">
+            <div ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div title="music/beautiful_night.mp3">beautiful_night</div>
+                <div title="music/escape.mp3">escape</div>
+                <div title="music/Snooze.mp3">Snooze</div>
+                <div title="music/Sugarcoat.mp3">Sugarcoat</div>
+                <div title="music/INVU.mp3">INVU</div>
+            </div>
+            <div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <button onclick="updateMusicPool()">更新歌單</button>
+        </div>
+    </div>
+
+    <script src="music_player.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+:root {
+    --vol-thmb-appperance: none;
+    --vol-thmb-background-color: rgb(0, 255, 136);
+    --vol-thmb-width: 20px;
+    --vol-thmb-height: 20px;
+    --vol-thmb-border-radius: 50%;
+
+    --progress-appperance: none;
+    --progress-background-color: rgb(197, 7, 0);
+    --progress-width: 5px;
+    --progress-height: 5px;
+    --progress-border-radius: 50%;
+    --progress-transition: 0.7s;
+
+    --progress-hover-width: 25px;
+    --progress-hover-height: 25px;
+}
+
+#title {
+    margin-bottom: 0;
+}
+
+#Qspeed、Sspeed {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+span:hover {
+    background-color: rgb(202, 188, 61);
+    box-shadow: 5px 5px 3px black;
+}
+
+#music_player {
+    text-align: center;
+    width: 724px;
+    margin: auto;
+
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 2px;
+    background-color: aquamarine;
+    background-image: url(logo.png);
+    background-repeat: no-repeat;
+    background-size: 12%;
+}
+#music_player>span {
+    cursor: pointer;
+    border: 2px solid black;
+    padding: 5px;
+    box-shadow: 2px 2px 3px black;
+    background-color: aqua;
+    font-family: webdings;
+}
+
+#selectPlayList {
+
+    float: left;
+    margin: 20px;
+}
+
+#volController>input[type="range"] {
+    appearance: none;
+    width: 40%;
+    border-radius: 10px;
+    border: 1px solid gray;
+
+}
+
+#volController>input[type="range"]::-webkit-slider-thumb {
+    appearance: var(--vol-thmb-appperance);
+    background-color: var(--vol-thmb-background-color);
+    width: var(--vol-thmb-width);
+    height: var(--vol-thmb-height);
+    border-radius: var(--vol-thmb-border-radius);
+
+}
+
+#volController>input[type="range"]::-moz-range-thumb {
+    appearance: var(--vol-thmb-appperance);
+    background-color: var(--vol-thmb-background-color);
+    width: var(--vol-thmb-width);
+    height: var(--vol-thmb-height);
+    border-radius: var(--vol-thmb-border-radius);
+
+}
+
+#volController>input[type="button"] {
+    border-radius: 50%;
+    border: 0;
+    box-shadow: 0 0 1px black;
+}
+
+#volController>input[type="text"] {
+    width: 25px;
+    text-align: center;
+    border: 0;
+    background-color: black;
+    color: yellow;
+}
+
+audio {
+    display: none;
+}
+
+#songListTable {
+    text-align: center;
+    margin: auto;
+}
+
+#progressBar {
+    cursor: pointer;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(236, 236, 234);
+}
+
+#progressBar::-webkit-slider-thumb {
+    cursor: pointer;
+    appearance: var(--progress-appperance);
+    width: var(--progress-width);
+    height: var(--progress-height);
+    background-color: var(--progress-background-color);
+}
+
+#progressBar::-webkit-slider-thumb:hover {
+    width: var(--progress-hover-width);
+    height: var(--progress-hover-height);
+    border-radius: var(--progress-border-radius);
+    transition: var(--progress-transition);
+}
+
+#progressBar::-moz-range-thumb {
+    cursor: pointer;
+    appearance: var(--progress-appperance);
+    width: var(--progress-width);
+    height: var(--progress-height);
+    background-color: var(--progress-background-color);
+}
+
+#progressBar::-moz-range-thumb:hover {
+    width: var(--progress-hover-width);
+    height: var(--progress-hover-height);
+    border-radius: var(--progress-border-radius);
+    transition: var(--progress-transition);
+}
+
+#info {
+    text-align: center;
+}
+
+#selectPlayList {
+    cursor: pointer;
+    width: 53%;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.btnBColor {
+    background-color: red;
+}
+
+#songListTable {
+    border: 2px solid black;
+    width: 550px;
+    margin: auto;
+}
+
+td {
+    cursor: pointer;
+    border: 2px solid black;
+    width: 550px;
+    margin: auto;
+}
+
+td:hover {
+
+    background-color: red;
+}
+
+#book {
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+#book>div {
+    border: 1px solid rgb(140, 140, 141);
+    height: 200px;
+    width: 325px;
+    overflow: auto;
+
+}
+
+#book>div>div {
+    cursor: pointer;
+    padding: 5px;
+    box-shadow: 0 0 3px gray;
+
+}
